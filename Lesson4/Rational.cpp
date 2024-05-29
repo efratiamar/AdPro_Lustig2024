@@ -24,7 +24,7 @@ Rational Rational::operator+(const Rational& num) const
 Rational& Rational::operator+=(const Rational& num)
 {
 	*this = *this + num;
-	//return *this;
+	return *this;
 }
 //r1 =r2 = r3;;
 Rational& Rational::operator=(const Rational& num)
@@ -33,6 +33,24 @@ Rational& Rational::operator=(const Rational& num)
 	mechane = num.getMechane();
 	return *this;
 }
+
+//cout << r1 << r2;
+ostream& operator<<(ostream& os, const Rational& num)
+{
+	os << num.mone << "/" << num.mechane;
+	return os;
+}
+
+//cin >> r1 >> r2; //2/3
+istream& operator>>(istream& is, Rational& num)
+{
+	is >> num.mone;
+	char slash;
+	is >> slash;
+	is >> num.mechane;
+	return is;
+}
+
 
 
 

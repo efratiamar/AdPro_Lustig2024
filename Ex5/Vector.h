@@ -31,6 +31,23 @@ public:
     //void setValue(int pos, int val);
     void print() const;
 
+    //Vector v;
+    //cout << v[6];
+    //v[5] = 88;
+    int& operator[] (int index)
+    {
+        if (index < size)
+            return numbers[index];
+        else if (index < capacity)
+        {
+            size++;
+            return numbers[index];
+        }
+        else
+            cout << "ERROR\n";
+    }
+
     friend ostream& operator<<(ostream& os, const Vector& p);
+
 
 };

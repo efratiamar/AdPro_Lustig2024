@@ -5,6 +5,13 @@ int main()
 	Rational r1(3, 4);
 
 	Rational r2(3, 4);
+	
+	//r1.print(); //2/3
+
+	cout << r1;  // 2/3
+
+	cin >> r1;  //2/3
+
 
 	if (r1 == r2)
 	{	}

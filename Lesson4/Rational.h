@@ -19,20 +19,15 @@ public:
     bool operator!=(const Rational& num) const;
     Rational operator+(const Rational& num) const;
     Rational& operator+=(const Rational& num) ;
-    Rational& operator=(const Rational& num)
+    Rational& operator=(const Rational& num);
 
+    //cout << r1 << r2;
+    friend ostream& operator<<(ostream& os, const Rational& num);
 
-
-
-
-
-
-
+    //cin >> r1 >> r2; //2/3
+    friend istream& operator>>(istream& is, Rational& num);
+ 
     void print() const { cout << mone << '/' << mechane << endl; }
 };
 
-bool Rational::operator==(const Rational& num) const
-{
-    return (mone == num.getMone() && mechane == num.getMechane());
-}
 
