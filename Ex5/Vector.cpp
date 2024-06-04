@@ -9,6 +9,22 @@ ostream& operator<<(ostream& os, const Vector& v)
     return os;
 }
 
+//Vector v;
+//cout << v[6];
+//v[5] = 88;
+int& Vector::operator[] (int index)
+{
+    if (index < size)
+        return numbers[index];
+    else if (index < capacity)
+    {
+        size++;
+        return numbers[index];
+    }
+    else
+        cout << "ERROR\n";
+}
+
 Vector::Vector(int _cap)
 {
     cout << "in ctor\n"; 
