@@ -14,5 +14,3 @@ public:
     void print();
     void congratulate();
 };
-
-

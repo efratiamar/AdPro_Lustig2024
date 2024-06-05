@@ -60,6 +60,7 @@ void TestCalculatorService()
 
 void TestStudentWithStaticFields()
 {
+
 	cout << Student::numOfStudents << endl;
 	cout << Student::numOfFails << endl;
 	
@@ -103,6 +104,12 @@ void TestStaticLocal()
 
 int main()
 {
+	Calculator c1;
+	int x = c1.add(7, 8);
+
+	x = Calculator::add(7, 5);
+
+
 	//TestStaticLocal();
 
 	//TestStudentWithStaticFields();

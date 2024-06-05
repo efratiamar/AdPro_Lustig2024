@@ -13,5 +13,4 @@ public:
     void setLastName(string lName);
     void print();
     bool operator<(const Person& p2);
-
 };

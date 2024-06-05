@@ -18,8 +18,7 @@ void Person::setLastName(string lName)
 
 void Person::print()
 {
-    cout << "First Name: " << firstName << endl;
-    cout << "Last Name: " << lastName << endl;
+    cout << firstName << " " << lastName << endl;
 }
 
 bool Person::operator<(const Person& p2)

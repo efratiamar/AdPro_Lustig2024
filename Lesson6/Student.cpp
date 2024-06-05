@@ -13,6 +13,9 @@ Student::Student(const char* n)
 Student::~Student()
 {
     numOfStudents--;
+
+    if (grade < 55)
+        numOfFails--;
 }
 
 void Student::SetGrade(int g)
@@ -24,6 +27,7 @@ void Student::SetGrade(int g)
 
 void Student::PercentageOfFailers()
 {
+    //grade = 6;//comp errro!!
     if (numOfStudents != 0)
         cout << (float)numOfFails / numOfStudents * 100 << "% of failures\n";
     else

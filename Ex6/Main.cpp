@@ -6,17 +6,21 @@ int main()
 {
     int element;
     List ls1, ls2;
+   
     try
     {
         for (int i = 0; i < 5; i++)
         {
             ls1.add(i);
             cout << i << " ";
-        }
-        ls1.removeFirst();
+        }//  4 3 2 1 0
+
+        List ls3(ls1);
+
+        ls1.removeFirst(); //   3 2 1 0
         for (int i = 0; i < 4; i++)
         {
-            element = ls1.firstElement();
+            element = ls1.firstElement();//3
             cout << element << " ";
             ls2.add(element);
         }
@@ -32,7 +36,7 @@ int main()
             "ls2 includes 3" :
             "ls2 doesn't include 3") << endl;
     }
-    catch (char* problem)
+    catch (const char* problem)
     {
         cout << problem;
     }
