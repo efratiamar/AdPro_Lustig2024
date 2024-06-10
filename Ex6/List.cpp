@@ -65,6 +65,8 @@ int List::firstElement() const
 	{
 		return head->key;
 	}
+	else
+		throw "underflow - cannot get first value of empty list\n";
 }
 
 bool List::search(const int& value) const
